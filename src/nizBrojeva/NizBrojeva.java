@@ -30,37 +30,37 @@ public class NizBrojeva {
 		input.close();
 	}
 
-	public static void getNajmanjiBrojUNizu(ArrayList<Integer> listaBrojeva) {
+	public static ArrayList<Integer> getNajmanjiBrojUNizu(ArrayList<Integer> listaBrojeva) {
 
 	}
 
-	public static void getNajveciBrojUNizu(ArrayList<Integer> listaBrojeva) {
+	public static ArrayList<Integer> getNajveciBrojUNizu(ArrayList<Integer> listaBrojeva) {
 
 	}
 
-	public static void getZbirBrojevaUNizu(ArrayList<Integer> listaBrojeva) {
+	public static int getZbirBrojevaUNizu(ArrayList<Integer> listaBrojeva) {
 
 		int sum = 0;
 		for (int i : listaBrojeva) {
 			sum += listaBrojeva.get(i);
 		}
-		System.out.println("Zbir brojeva u nizu je: " + sum);
+		return sum;
 	}
 
-	public static void getProsjekBrojevaUNizu(ArrayList<Integer> listaBrojeva) {
+	public static double getProsjekBrojevaUNizu(ArrayList<Integer> listaBrojeva) {
 
 		int sum = 0;
 		for (int i : listaBrojeva) {
 			sum += listaBrojeva.get(i);
 		}
-		System.out.println("Prosjek brojeva u nizu je: " + (sum / (double) (listaBrojeva.size())));
+		return sum / ((double) listaBrojeva.size());
 	}
 
-	public static void getUnikatneBrojeveUNizu(ArrayList<Integer> listaBrojeva) {
+	public static ArrayList<Integer> getUnikatneBrojeveUNizu(ArrayList<Integer> listaBrojeva) {
 
 	}
 
-	public static void getSortiranNiz(ArrayList<Integer> listaBrojeva) {
+	public static ArrayList<Integer> getSortiranNiz(ArrayList<Integer> listaBrojeva) {
 
 	}
 }
