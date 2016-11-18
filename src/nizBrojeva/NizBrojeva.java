@@ -5,10 +5,9 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.InputMismatchException;
 import java.util.Scanner;
-import java.util.SortedSet;
+
 
 public class NizBrojeva {
-
 	static ArrayList<Integer> hash = new ArrayList<>();
 
 	public static void main(String[] args) {
@@ -25,7 +24,7 @@ public class NizBrojeva {
 			}
 		}
 		getNajmanjiBrojUNizu(hash);
-		getNajveciBrojUNizu(null);
+		getNajveciBrojUNizu(hash);
 		getProsjekBrojevaUNizu(hash);
 		getSortiranNiz(hash);
 		getUnikatneBrojeveUNizu(hash);
@@ -33,20 +32,37 @@ public class NizBrojeva {
 		input.close();
 	}
 
-	public static void getNajmanjiBrojUNizu(ArrayList<Integer> listaBrojeva) {
 
+	/* @author Jasmin Bektic */
+	public static int getNajmanjiBrojUNizu(ArrayList<Integer> listaBrojeva) {
+		ArrayList<Integer> list = new ArrayList<>();
+		Collections.sort(list);
+		return list.get(0);
 	}
 
-	public static void getNajveciBrojUNizu(ArrayList<Integer> listaBrojeva) {
-
+	/* @author Jasmin Bektic */
+	public static int getNajveciBrojUNizu(ArrayList<Integer> listaBrojeva) {
+		ArrayList<Integer> list = new ArrayList<>();
+		Collections.sort(list);
+		return list.get(list.size());
 	}
 
-	public static void getZbirBrojevaUNizu(ArrayList<Integer> listaBrojeva) {
+	public static int getZbirBrojevaUNizu(ArrayList<Integer> listaBrojeva) {
 
+		int sum = 0;
+		for (int i : listaBrojeva) {
+			sum += listaBrojeva.get(i);
+		}
+		return sum;
 	}
 
-	public static void getProsjekBrojevaUNizu(ArrayList<Integer> listaBrojeva) {
+	public static double getProsjekBrojevaUNizu(ArrayList<Integer> listaBrojeva) {
 
+		int sum = 0;
+		for (int i : listaBrojeva) {
+			sum += listaBrojeva.get(i);
+		}
+		return sum / ((double) listaBrojeva.size());
 	}
 
 	/** @author AonoZan Dejan Petrovic 2016 © */
