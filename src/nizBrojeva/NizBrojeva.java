@@ -17,6 +17,7 @@ public class NizBrojeva {
 		while (i != 0) {
 			try {
 				i = input.nextInt();
+				if(i!=0)
 				hash.add(i);
 			} catch (InputMismatchException e) {
 				e.printStackTrace();
@@ -24,14 +25,18 @@ public class NizBrojeva {
 		}
 		System.out.println("Najmanji broj u nizu je : " + getNajmanjiBrojUNizu(hash));
 		System.out.println("Najveci broj u nizu je: " + getNajveciBrojUNizu(hash));
-		System.out.println("Prosjek brojeva u nizu je: " + getProsjekBrojevaUNizu(hash));
+		System.out.printf("Prosjek brojeva u nizu je: %.2f\n" ,getProsjekBrojevaUNizu(hash));
 		System.out.println("Zbir brojeva u nizu je: " + getZbirBrojevaUNizu(hash));
 		ArrayList<Integer> sortiraniNiz = getSortiranNiz(hash);
 		ArrayList<Integer> unikatniNiz = getUnikatneBrojeveUNizu(hash);
 		System.out.println("Sortirani brojevi: ");
-		sortiraniNiz.forEach(m -> System.out.print(m + " "));
+		for (int j : sortiraniNiz) {
+			System.out.print(j + " ");
+		}
 		System.out.println("\nUnikatni niz brojeva: ");
-		unikatniNiz.forEach(m -> System.out.print(m + " "));
+		for (int j : unikatniNiz) {
+			System.out.print(j + " ");
+		}
 		input.close();
 	}
 
