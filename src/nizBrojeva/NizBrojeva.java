@@ -65,20 +65,20 @@ public class NizBrojeva {
 		return sum / ((double) listaBrojeva.size());
 	}
 
-	/** @author AonoZan Dejan Petrovic 2016 © */
+	/** @author AonoZan Dejan Petrovic 2016 Â© */
 	public static ArrayList<Integer> getUnikatneBrojeveUNizu(ArrayList<Integer> listaBrojeva) {
 		ArrayList<Integer> newList = new ArrayList<Integer>();
-		newList.addAll(hash);
+		newList.addAll(listaBrojeva);
 		HashSet<Integer> uniqueNumbers = new HashSet<Integer>(newList);
 		newList.clear();
 		uniqueNumbers.forEach(number -> newList.add(number));
 		return newList;
 	}
 
-	/** @author AonoZan Dejan Petrovic 2016 © */
+	/** @author AonoZan Dejan Petrovic 2016 Â© */
 	public static ArrayList<Integer> getSortiranNiz(ArrayList<Integer> listaBrojeva) {
 		ArrayList<Integer> newList = new ArrayList<Integer>();
-		newList.addAll(hash);
+		newList.addAll(listaBrojeva);
 		Collections.sort(newList);
 		return newList;
 	}
