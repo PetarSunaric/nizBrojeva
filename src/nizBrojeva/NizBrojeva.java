@@ -66,20 +66,20 @@ public class NizBrojeva {
 	}
 
 	/** @author AonoZan Dejan Petrovic 2016 © */
-	public static void getUnikatneBrojeveUNizu(ArrayList<Integer> listaBrojeva) {
-		HashSet<Integer> uniqueNumbers = new HashSet<Integer>(hash);
-		System.out.print("Svi jedinstveni brojevi su: ");
-		uniqueNumbers.forEach(number -> System.out.print(number + " "));
-		System.out.println();
+	public static ArrayList<Integer> getUnikatneBrojeveUNizu(ArrayList<Integer> listaBrojeva) {
+		ArrayList<Integer> newList = new ArrayList<Integer>();
+		newList.addAll(hash);
+		HashSet<Integer> uniqueNumbers = new HashSet<Integer>(newList);
+		newList.clear();
+		uniqueNumbers.forEach(number -> newList.add(number));
+		return newList;
 	}
 
 	/** @author AonoZan Dejan Petrovic 2016 © */
-	public static void getSortiranNiz(ArrayList<Integer> listaBrojeva) {
+	public static ArrayList<Integer> getSortiranNiz(ArrayList<Integer> listaBrojeva) {
 		ArrayList<Integer> newList = new ArrayList<Integer>();
 		newList.addAll(hash);
 		Collections.sort(newList);
-		System.out.print("lista brojeva sortirana: ");
-		newList.forEach(number -> System.out.print(number + " "));
-		System.out.println();
+		return newList;
 	}
 }
