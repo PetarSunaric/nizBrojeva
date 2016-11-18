@@ -40,10 +40,20 @@ public class NizBrojeva {
 
 	public static void getZbirBrojevaUNizu(ArrayList<Integer> listaBrojeva) {
 
+		int sum = 0;
+		for (int i : listaBrojeva) {
+			sum += listaBrojeva.get(i);
+		}
+		System.out.println("Zbir brojeva u nizu je: " + sum);
 	}
 
 	public static void getProsjekBrojevaUNizu(ArrayList<Integer> listaBrojeva) {
 
+		int sum = 0;
+		for (int i : listaBrojeva) {
+			sum += listaBrojeva.get(i);
+		}
+		System.out.println("Prosjek brojeva u nizu je: " + (sum / (double) (listaBrojeva.size())));
 	}
 
 	public static void getUnikatneBrojeveUNizu(ArrayList<Integer> listaBrojeva) {
