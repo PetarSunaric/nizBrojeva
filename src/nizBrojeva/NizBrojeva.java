@@ -30,11 +30,11 @@ public class NizBrojeva {
 		input.close();
 	}
 
-	public static ArrayList<Integer> getNajmanjiBrojUNizu(ArrayList<Integer> listaBrojeva) {
+	public static int getNajmanjiBrojUNizu(ArrayList<Integer> listaBrojeva) {
 
 	}
 
-	public static ArrayList<Integer> getNajveciBrojUNizu(ArrayList<Integer> listaBrojeva) {
+	public static int getNajveciBrojUNizu(ArrayList<Integer> listaBrojeva) {
 
 	}
 
