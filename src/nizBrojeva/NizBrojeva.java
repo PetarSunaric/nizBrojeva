@@ -2,9 +2,10 @@ package nizBrojeva;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.InputMismatchException;
 import java.util.Scanner;
-import java.util.TreeSet;
+
 
 public class NizBrojeva {
 	static ArrayList<Integer> hash = new ArrayList<>();
@@ -64,11 +65,21 @@ public class NizBrojeva {
 		return sum / ((double) listaBrojeva.size());
 	}
 
+	/** @author AonoZan Dejan Petrovic 2016 © */
 	public static ArrayList<Integer> getUnikatneBrojeveUNizu(ArrayList<Integer> listaBrojeva) {
-
+		ArrayList<Integer> newList = new ArrayList<Integer>();
+		newList.addAll(hash);
+		HashSet<Integer> uniqueNumbers = new HashSet<Integer>(newList);
+		newList.clear();
+		uniqueNumbers.forEach(number -> newList.add(number));
+		return newList;
 	}
 
+	/** @author AonoZan Dejan Petrovic 2016 © */
 	public static ArrayList<Integer> getSortiranNiz(ArrayList<Integer> listaBrojeva) {
-
+		ArrayList<Integer> newList = new ArrayList<Integer>();
+		newList.addAll(hash);
+		Collections.sort(newList);
+		return newList;
 	}
 }
