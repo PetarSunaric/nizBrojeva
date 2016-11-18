@@ -1,6 +1,7 @@
 package nizBrojeva;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.TreeSet;
@@ -30,31 +31,44 @@ public class NizBrojeva {
 		input.close();
 	}
 
-	/* @author Jasmin Bektic */
-	public static void getNajmanjiBrojUNizu(ArrayList<Integer> listaBrojeva) {
-		TreeSet<Integer> set = new TreeSet<>(listaBrojeva);
-		System.out.println("First number: " + set.pollFirst());
-	}
 
 	/* @author Jasmin Bektic */
-	public static void getNajveciBrojUNizu(ArrayList<Integer> listaBrojeva) {
-		TreeSet<Integer> set = new TreeSet<>(listaBrojeva);
-		System.out.println("First number: " + set.pollLast());
+	public static int getNajmanjiBrojUNizu(ArrayList<Integer> listaBrojeva) {
+		ArrayList<Integer> list = new ArrayList<>();
+		Collections.sort(list);
+		return list.get(0);
 	}
 
-	public static void getZbirBrojevaUNizu(ArrayList<Integer> listaBrojeva) {
+	/* @author Jasmin Bektic */
+	public static int getNajveciBrojUNizu(ArrayList<Integer> listaBrojeva) {
+		ArrayList<Integer> list = new ArrayList<>();
+		Collections.sort(list);
+		return list.get(list.size());
+	}
+
+	public static int getZbirBrojevaUNizu(ArrayList<Integer> listaBrojeva) {
+
+		int sum = 0;
+		for (int i : listaBrojeva) {
+			sum += listaBrojeva.get(i);
+		}
+		return sum;
+	}
+
+	public static double getProsjekBrojevaUNizu(ArrayList<Integer> listaBrojeva) {
+
+		int sum = 0;
+		for (int i : listaBrojeva) {
+			sum += listaBrojeva.get(i);
+		}
+		return sum / ((double) listaBrojeva.size());
+	}
+
+	public static ArrayList<Integer> getUnikatneBrojeveUNizu(ArrayList<Integer> listaBrojeva) {
 
 	}
 
-	public static void getProsjekBrojevaUNizu(ArrayList<Integer> listaBrojeva) {
-
-	}
-
-	public static void getUnikatneBrojeveUNizu(ArrayList<Integer> listaBrojeva) {
-
-	}
-
-	public static void getSortiranNiz(ArrayList<Integer> listaBrojeva) {
+	public static ArrayList<Integer> getSortiranNiz(ArrayList<Integer> listaBrojeva) {
 
 	}
 }
