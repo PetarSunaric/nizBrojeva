@@ -37,16 +37,18 @@ public class NizBrojeva {
 
 	/* @author Jasmin Bektic */
 	public static int getNajmanjiBrojUNizu(ArrayList<Integer> listaBrojeva) {
-		ArrayList<Integer> list = listaBrojeva;
+		ArrayList<Integer> list = new ArrayList<>();
+		list.addAll(listaBrojeva);
 		Collections.sort(list);
 		return list.get(0);
 	}
 
 	/* @author Jasmin Bektic */
 	public static int getNajveciBrojUNizu(ArrayList<Integer> listaBrojeva) {
-		ArrayList<Integer> list = listaBrojeva;
+		ArrayList<Integer> list = new ArrayList<>();
+		list.addAll(listaBrojeva);
 		Collections.sort(list);
-		return list.get(list.size()-1);
+		return list.get(list.size() - 1);
 	}
 
 	public static int getZbirBrojevaUNizu(ArrayList<Integer> listaBrojeva) {
