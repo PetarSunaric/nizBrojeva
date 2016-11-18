@@ -6,12 +6,11 @@ import java.util.HashSet;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-
 public class NizBrojeva {
-	static ArrayList<Integer> hash = new ArrayList<>();
 
 	public static void main(String[] args) {
 
+		ArrayList<Integer> hash = new ArrayList<>();
 		Scanner input = new Scanner(System.in);
 		System.out.print("Unesite niz brojeva(nula prekida unos): ");
 		int i = 1;
@@ -23,35 +22,38 @@ public class NizBrojeva {
 				e.printStackTrace();
 			}
 		}
-		getNajmanjiBrojUNizu(hash);
-		getNajveciBrojUNizu(hash);
-		getProsjekBrojevaUNizu(hash);
-		getSortiranNiz(hash);
-		getUnikatneBrojeveUNizu(hash);
-		getZbirBrojevaUNizu(hash);
+		System.out.println("Najmanji broj u nizu je : " + getNajmanjiBrojUNizu(hash));
+		System.out.println("Najveci broj u nizu je: " + getNajveciBrojUNizu(hash));
+		System.out.println("Prosjek brojeva u nizu je: " + getProsjekBrojevaUNizu(hash));
+		System.out.println("Zbir brojeva u nizu je: " + getZbirBrojevaUNizu(hash));
+		ArrayList<Integer> sortiraniNiz = getSortiranNiz(hash);
+		ArrayList<Integer> unikatniNiz = getUnikatneBrojeveUNizu(hash);
+		System.out.println("Sortirani brojevi: ");
+		sortiraniNiz.forEach(m -> System.out.print(m + " "));
+		System.out.println("\nUnikatni niz brojeva: ");
+		unikatniNiz.forEach(m -> System.out.print(m + " "));
 		input.close();
 	}
 
-
 	/* @author Jasmin Bektic */
 	public static int getNajmanjiBrojUNizu(ArrayList<Integer> listaBrojeva) {
-		ArrayList<Integer> list = new ArrayList<>();
+		ArrayList<Integer> list = listaBrojeva;
 		Collections.sort(list);
 		return list.get(0);
 	}
 
 	/* @author Jasmin Bektic */
 	public static int getNajveciBrojUNizu(ArrayList<Integer> listaBrojeva) {
-		ArrayList<Integer> list = new ArrayList<>();
+		ArrayList<Integer> list = listaBrojeva;
 		Collections.sort(list);
-		return list.get(list.size());
+		return list.get(list.size()-1);
 	}
 
 	public static int getZbirBrojevaUNizu(ArrayList<Integer> listaBrojeva) {
 
 		int sum = 0;
 		for (int i : listaBrojeva) {
-			sum += listaBrojeva.get(i);
+			sum += i;
 		}
 		return sum;
 	}
@@ -60,12 +62,14 @@ public class NizBrojeva {
 
 		int sum = 0;
 		for (int i : listaBrojeva) {
-			sum += listaBrojeva.get(i);
+			sum += i;
 		}
-		return sum / ((double) listaBrojeva.size());
+		return sum / ((double) (listaBrojeva.size() - 1));
 	}
 
-	/** @author AonoZan Dejan Petrovic 2016 © */
+	/**
+	 * @author AonoZan Dejan Petrovic 2016 ©
+	 */
 	public static ArrayList<Integer> getUnikatneBrojeveUNizu(ArrayList<Integer> listaBrojeva) {
 		ArrayList<Integer> newList = new ArrayList<Integer>();
 		newList.addAll(listaBrojeva);
@@ -75,7 +79,9 @@ public class NizBrojeva {
 		return newList;
 	}
 
-	/** @author AonoZan Dejan Petrovic 2016 © */
+	/**
+	 * @author AonoZan Dejan Petrovic 2016 ©
+	 */
 	public static ArrayList<Integer> getSortiranNiz(ArrayList<Integer> listaBrojeva) {
 		ArrayList<Integer> newList = new ArrayList<Integer>();
 		newList.addAll(listaBrojeva);
