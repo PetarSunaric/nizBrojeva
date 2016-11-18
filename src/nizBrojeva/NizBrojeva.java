@@ -1,11 +1,12 @@
 package nizBrojeva;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.InputMismatchException;
 import java.util.Scanner;
+import java.util.TreeSet;
 
 public class NizBrojeva {
-
 	static ArrayList<Integer> hash = new ArrayList<>();
 
 	public static void main(String[] args) {
@@ -22,7 +23,7 @@ public class NizBrojeva {
 			}
 		}
 		getNajmanjiBrojUNizu(hash);
-		getNajveciBrojUNizu(null);
+		getNajveciBrojUNizu(hash);
 		getProsjekBrojevaUNizu(hash);
 		getSortiranNiz(hash);
 		getUnikatneBrojeveUNizu(hash);
@@ -30,12 +31,19 @@ public class NizBrojeva {
 		input.close();
 	}
 
-	public static int getNajmanjiBrojUNizu(ArrayList<Integer> listaBrojeva) {
 
+	/* @author Jasmin Bektic */
+	public static int getNajmanjiBrojUNizu(ArrayList<Integer> listaBrojeva) {
+		ArrayList<Integer> list = new ArrayList<>();
+		Collections.sort(list);
+		return list.get(0);
 	}
 
+	/* @author Jasmin Bektic */
 	public static int getNajveciBrojUNizu(ArrayList<Integer> listaBrojeva) {
-
+		ArrayList<Integer> list = new ArrayList<>();
+		Collections.sort(list);
+		return list.get(list.size());
 	}
 
 	public static int getZbirBrojevaUNizu(ArrayList<Integer> listaBrojeva) {
