@@ -1,8 +1,11 @@
 package nizBrojeva;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashSet;
 import java.util.InputMismatchException;
 import java.util.Scanner;
+import java.util.SortedSet;
 
 public class NizBrojeva {
 
@@ -46,11 +49,21 @@ public class NizBrojeva {
 
 	}
 
+	/** @author AonoZan Dejan Petrovic 2016 © */
 	public static void getUnikatneBrojeveUNizu(ArrayList<Integer> listaBrojeva) {
-
+		HashSet<Integer> uniqueNumbers = new HashSet<Integer>(hash);
+		System.out.print("Svi jedinstveni brojevi su: ");
+		uniqueNumbers.forEach(number -> System.out.print(number + " "));
+		System.out.println();
 	}
 
+	/** @author AonoZan Dejan Petrovic 2016 © */
 	public static void getSortiranNiz(ArrayList<Integer> listaBrojeva) {
-
+		ArrayList<Integer> newList = new ArrayList<Integer>();
+		newList.addAll(hash);
+		Collections.sort(newList);
+		System.out.print("lista brojeva sortirana: ");
+		newList.forEach(number -> System.out.print(number + " "));
+		System.out.println();
 	}
 }
