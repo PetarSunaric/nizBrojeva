@@ -3,9 +3,9 @@ package nizBrojeva;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
+import java.util.TreeSet;
 
 public class NizBrojeva {
-
 	static ArrayList<Integer> hash = new ArrayList<>();
 
 	public static void main(String[] args) {
@@ -22,7 +22,7 @@ public class NizBrojeva {
 			}
 		}
 		getNajmanjiBrojUNizu(hash);
-		getNajveciBrojUNizu(null);
+		getNajveciBrojUNizu(hash);
 		getProsjekBrojevaUNizu(hash);
 		getSortiranNiz(hash);
 		getUnikatneBrojeveUNizu(hash);
@@ -30,12 +30,16 @@ public class NizBrojeva {
 		input.close();
 	}
 
+	/* @author Jasmin Bektic */
 	public static void getNajmanjiBrojUNizu(ArrayList<Integer> listaBrojeva) {
-
+		TreeSet<Integer> set = new TreeSet<>(listaBrojeva);
+		System.out.println("First number: " + set.pollFirst());
 	}
 
+	/* @author Jasmin Bektic */
 	public static void getNajveciBrojUNizu(ArrayList<Integer> listaBrojeva) {
-
+		TreeSet<Integer> set = new TreeSet<>(listaBrojeva);
+		System.out.println("First number: " + set.pollLast());
 	}
 
 	public static void getZbirBrojevaUNizu(ArrayList<Integer> listaBrojeva) {
